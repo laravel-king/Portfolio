@@ -196,7 +196,7 @@ return(
                             </TabsContent>
                             <TabsContent value="skills">
                                 <div className="text-center lg:text-left">
-                                    <h3 className="h3 mb-8">Tools I use Everyday</h3>
+                                    <h3 className="h3 mb-8">Tools That I use Everyday</h3>
                                     <div className="mb-16">
                                         <h4 className="text-xl font-semibold mb-2">Skills</h4>
                                         <div className="border-b border-border mb-4"></div>
