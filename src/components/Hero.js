@@ -1,5 +1,5 @@
 import Link from "next/link"
-import {Button, buttonVariants} from "./ui/button"
+import {Button} from "./ui/button"
 import {Download, Send} from "lucide-react"
 
 import {
@@ -14,7 +14,7 @@ import Socials from  "./Socials"
 const Hero = () => {
 
     return (
-        <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-cover bg-bottom dark:bg-none">
+        <section className="py-6 lg:py-12 xl:py-20 h-[84vh] xl:pt-16 bg-hero bg-no-repeat bg-cover bg-bottom dark:bg-none">
             <div className="container mx-auto">
                 <div className="flex justify-between gap-x-8">
                     <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
