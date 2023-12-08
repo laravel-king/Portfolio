@@ -1,6 +1,7 @@
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs"
 import {User2, Mailbox, PhoneCall, Briefcase, GraduationCap, Calendar, HomeIcon} from "lucide-react"
 import Devimg from "@/components/Devimg";
+import Image from "next/image";
 
 const userInfo = [
     {icon: <User2 size={20} />, info: "Ouaiji Abdul-Aziz" },
@@ -190,11 +191,44 @@ return(
                                                 })}
                                             </div>
                                         </div>
-                                        <div>experience</div>
                                     </div>
                                 </div>
                             </TabsContent>
-                            <TabsContent value="skills">Skill Info</TabsContent>
+                            <TabsContent value="skills">
+                                <div className="text-center lg:text-left">
+                                    <h3 className="h3 mb-8">Tools I use Everyday</h3>
+                                    <div className="mb-16">
+                                        <h4 className="text-xl font-semibold mb-2">Skills</h4>
+                                        <div className="border-b border-border mb-4"></div>
+                                        <div>
+                                            {getData(skillData, 'Skills').data.map(
+                                                (skill, index) => {
+                                                    const {name} = skill;
+                                                    return(
+                                                        <div className="w-2/4 text-center xl:text-left mx-auto xl:mx-0" key={index}>
+                                                            <div className="font-medium">{name}</div>
+                                                        </div>
+                                                    )
+                                                }
+                                            )}
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 className="h4 text-xl font-semibold mb-2 lg:text-left">Tools</h4>
+                                        <div className="border-b border-border mb-4"></div>
+                                        <div className="flex gap-x-8 jsutify-center lg:justify-start">
+                                            {getData(skillData, "Tools").data.map((tool, index) => {
+                                                const {imgPath} = tool;
+                                                return(
+                                                    <div key={index}>
+                                                        <Image src={imgPath} width={48} height={48} priority alt="" />
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
+                                    </div>
+                                </div>
+                            </TabsContent>
                         </div>
                     </Tabs>
                 </div>
