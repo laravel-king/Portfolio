@@ -10,7 +10,6 @@ const variants = {
 
 const Template = ({children}) => {
     const completion = useScrollProgress();
-    console.log(completion)
     return (
         <>
             <motion.main variants={variants} initial="hidden" animate="enter" transition={{type: 'linear', delay:0.2, duration : 0.4 }}>
